@@ -1,0 +1,37 @@
+package novoexercicio;
+ /*
+1) Ler o nome de 2 times e o número de gols marcados na partida (para cada time).
+Escrever o nome do vencedor. Caso não haja vencedor deverá ser impressa a palavra
+EMPATE.
+ */
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+            Scanner teclado = new Scanner (System.in);
+
+        String time1, time2;
+        int golstime1, golstime2;
+
+
+        System.out.println("Digite o nome do time 1:");
+        time1=teclado.next();
+        System.out.println("Digite o numero de gols do time 1:");
+        golstime1=teclado.nextInt();
+
+        System.out.println("Digite o nome do time 2:");
+        time2=teclado.next();
+        System.out.println("Digite o numero de gols do time 2:");
+        golstime2=teclado.nextInt();
+
+        if(golstime1 > golstime2) {
+            System.out.println("O time 1 e o vencedor");
+        }else if (golstime2 > golstime1) {
+            System.out.println("O time 2 e o vencedor");
+        }else {
+            System.out.println("Empate");
+        }
+
+    }
+}

@@ -1,0 +1,23 @@
+package novoexercicio;
+ /*
+13) Escreva um algoritmo para ler o salário mensal atual de um funcionário e o percentual
+de reajuste. Calcular e escrever o valor do novo salário.
+ */
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+            Scanner teclado = new Scanner (System.in);
+        // entrada de dados
+        double salarioATUAL ,percenreajuste, Novosalario ;
+
+        System.out.println("Digite seu salario atual:");
+        salarioATUAL=teclado.nextDouble();
+        
+	// aumento de 10 porcento
+        // 10 divide por 100 = 1.1
+        Novosalario= salarioATUAL  * 1.1 ;
+        System.out.println("Salario atual  " + Novosalario);
+    }
+}

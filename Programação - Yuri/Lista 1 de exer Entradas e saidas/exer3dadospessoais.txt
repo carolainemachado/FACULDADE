@@ -1,0 +1,29 @@
+package novoexercicio;
+ /*
+3) Receba o nome, sobrenome, sexo, RG e idade e posteriormente exiba as informações
+na tela. Nome e sobrenome devem ser informados na mesma linha.
+ */
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+            Scanner teclado = new Scanner (System.in);
+
+        String nome, sobrenome , sexo , RG , idade ;
+
+        System.out.println("Digite o nome e sobrenome:");
+        nome=teclado.next();
+        sobrenome=teclado.next();
+
+        System.out.println("Digite o sexo:");
+        sexo=teclado.next();
+
+        System.out.println("Digite o RG:");
+        RG=teclado.next();
+
+        System.out.println("Digite a idade:");
+        idade=teclado.next();
+
+    }
+}

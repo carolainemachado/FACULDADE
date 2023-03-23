@@ -1,0 +1,26 @@
+package novoexercicio;
+ /*
+7) Faça um algoritmo que receba um número e diga se este número está no intervalo
+entre 5 e 100.
+ */
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+            Scanner teclado = new Scanner (System.in);
+
+            int num;
+
+            System.out.println("Digite um número:");
+            num=teclado.nextInt();
+
+            if(num >=5 && num<=100 ) {
+            System.out.println("Está no intervalo");
+
+            }else{
+            System.out.println("Não está no intervalo");
+        }
+
+    }
+}

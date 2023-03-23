@@ -1,0 +1,27 @@
+package novoexercicio;
+ /*
+8) Receba o valor de uma multa de transito e a quantidade de pontos na carteira do
+condutor, caso o pontos na carteira sejam maiores que 10 a multa é acrescida de 15%.
+Ex: multa 900 e pts 13, resposta 1035
+ */
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+            Scanner teclado = new Scanner (System.in);
+
+        double multa,acrescida;
+
+        System.out.println("Digite o valor da multa:");
+        multa=teclado.nextInt();
+
+        acrescida = (multa * 0.15) + multa;
+
+        if(multa>=10) {
+            System.out.println("O valor da multa e de: " + acrescida);
+
+        }
+
+    }
+}

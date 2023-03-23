@@ -1,0 +1,99 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+
+
+public class Main{
+    public static void main(String [] args){
+        ArrayList<livro> array = new ArrayList<livro>();
+        
+        Scanner kboard = new Scanner(System.in);
+        boolean fimLoop = false;
+        
+        int key;
+        
+        while(!fimLoop){
+            System.out.print("[1] – Cadastrar novo livro"
+                            +"\n[2] – Listar livros"
+                            +"\n[3] – Buscar livros por nome"
+                            +"\n[4] – Buscar livros por categor"
+                            +"\n[5] – Buscar livros por preço"
+                            +"\n[0] – Encerrar atividades");
+            key = kboard.nextInt();
+            
+            switch (key){
+                
+                case 1:
+                    System.out.print("\nInsira o titulo: ");
+                    kboard.nextLine();
+                    String titulo = kboard.nextLine();
+        
+                    System.out.print("\nInsira a editora: ");
+                    String editora = kboard.nextLine();
+        
+                     System.out.print("\nInsira uma categoria: ");
+                    String categoria = kboard.nextLine();
+        
+                    System.out.print("\nInsira o ano de lançamento: ");
+                    int ano = kboard.nextInt();
+                
+                    System.out.print("\nInsira o valor: ");
+                    double valor = kboard.nextDouble();
+                    
+                    livro l = new livro(titulo,editora,categoria,ano,valor);
+                    array.add(l);
+                    break;
+                    
+                case 2:
+                    for(livro i : array){
+                        i.info();
+                    }
+                
+                    break;
+                    
+                case 3:
+                    
+                    System.out.print("\nInsira o nome do livro que deseja buscar: ");
+                    kboard.nextLine();
+                    String ttl = kboard.nextLine();
+                    
+                    for(livro i : array){
+                        if (i.titulo.contains(ttl)){
+                            i.info();
+                        }
+                    }
+
+                    break;
+                    
+                case 4:
+                    System.out.print("\nInsira categoria que deseja buscar: ");
+                    kboard.nextLine();
+                    String cat = kboard.nextLine();
+                    
+                    for(livro i : array){
+                        if (i.categoria.contains(cat)){
+                            i.info();
+                        }
+                    }
+                
+                    break;
+                    
+                case 5:
+                    System.out.print("\nInsira o nome do livro que deseja buscar: ");
+                    kboard.nextLine();
+                    double val = kboard.nextDouble();
+                    
+                    for(livro i : array){
+                        if (i.valor <= val){
+                            i.info();
+                        }
+                    }                
+                    break;
+                    
+                case 0:
+                    fimLoop = true;
+                    break;
+            }
+        }
+    }
+}

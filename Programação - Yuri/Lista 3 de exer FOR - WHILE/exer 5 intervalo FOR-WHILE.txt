@@ -1,0 +1,19 @@
+package novoexercicio;
+ /*
+5) Faça um algoritmo que leia 10 números e ao final informar quantos números estão no
+intervalo entre 10 e 150
+ */
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+            Scanner teclado = new Scanner (System.in);
+
+        for(int i=10 ; i<=150 ; i++){
+            if(i % 10 == 0){
+                System.out.println(i+ "     " );
+            }
+            }
+    }
+}

@@ -1,0 +1,18 @@
+package novoexercicio;
+ /*
+3) Escreva um algoritmo para imprimir os números de 1 (inclusive) a 100 (inclusive) em
+ordem decrescente.
+ */
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+            Scanner teclado = new Scanner (System.in);
+        for(int i=100; i >0; i--){
+            if(i % 1 ==0){
+                System.out.println(i);
+            }
+        }
+    }
+}

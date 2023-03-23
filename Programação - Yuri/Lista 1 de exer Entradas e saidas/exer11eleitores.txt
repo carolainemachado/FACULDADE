@@ -1,0 +1,40 @@
+package novoexercicio;
+ /*11) Escreva um algoritmo para ler o número total de eleitores de um município,
+o número de votos brancos, nulos e válidos. Calcular e escrever o percentual que
+cada um representa em relação ao total de eleitores.
+ */
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+
+            Scanner teclado = new Scanner (System.in);
+
+            double ntotalEleitores ,brancos , nulos , validos,percenBrancos,percenNulos,percenValidos ;
+
+            System.out.println("Entre com o n total de eleitores:");
+            ntotalEleitores=teclado.nextDouble();
+            System.out.println("Entre com os votos em brancos:");
+            brancos=teclado.nextDouble();
+            System.out.println("Entre com os votos nulos:");
+            nulos=teclado.nextDouble();
+
+            validos= ntotalEleitores - brancos - nulos;
+
+            //- Regra de tres
+            //EXEMPLO 300 total de eleitores entao 300 esta para 100 porcento
+            // 300 - 100%
+            // 30  -  x %  30 votaram em branco quantos porcentos corresponde esse 30
+
+            percenBrancos = 100 * brancos/ ntotalEleitores;
+            System.out.println("Porcentagem de votos em brancos: "  +  percenBrancos);
+
+            percenNulos = 100 * nulos/ ntotalEleitores;
+            System.out.println("Porcentagem de votos nulos: "  +  percenNulos);
+
+            percenValidos = 100 * validos/ ntotalEleitores;
+            System.out.println("Porcentagem de votos validos: "  +  percenValidos);
+    }
+}

@@ -1,0 +1,18 @@
+package novoexercicio;
+ /*
+1) Faça um algoritmo que escreva em forma crescente os números de 1 até 100.
+ */
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+            Scanner teclado = new Scanner (System.in);
+
+            for (int i=100; i >0; i--) {
+                System.out.println(i);
+            }
+    
+
+    }
+}

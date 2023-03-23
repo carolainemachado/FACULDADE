@@ -1,0 +1,26 @@
+package novoexercicio;
+ /*
+9) Receba um valor em mph (milhas por hora) e transforme em km\h. Ex: 60 mph retorna
+96.56 kmh
+ */
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+            Scanner teclado = new Scanner (System.in);
+
+        //Milhas  1 mph
+        //Quilômetros por hora 1.61 kph
+
+        double milhas, quilometragem;
+
+        System.out.println("Valor em MPH:");
+        milhas=teclado.nextInt();
+
+        quilometragem = milhas * 1.61;
+
+        System.out.println("Resultado "  +  quilometragem  + " km/h ");
+
+    }
+}

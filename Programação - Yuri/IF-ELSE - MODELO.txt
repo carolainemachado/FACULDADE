@@ -1,0 +1,28 @@
+importar java.util.Scanner;
+
+classe pública AulaRev3b {
+    public static void main(String[] args) {
+        Teclado do scanner = new Scanner(System.in);
+        int limiteDeVelocidade = 40;
+        int velocidadeDoCarro;
+
+        System.out.println("Qual a velocidade do carro: ");
+        velocidadeDoCarro = teclado.nextInt();
+
+        if(velocidadeDoCarro>limiteDeVelocidade && velocidadeDoCarro<(limiteDeVelocidade*2)){
+            System.out.println("Carro acima da capacidade permitida!");
+            System.out.println("Aplicar multa LEVE");
+        }
+        else if(velocidadeDoCarro>(limiteDeVelocidade*2)){
+            System.out.println("Carro acima da capacidade permitida!");
+            System.out.println("Aplicar multa GRAVE");
+        }
+        senão{
+            System.out.println("Carro em situação regular de velocidade.");
+        }
+
+
+
+    }
+
+}
